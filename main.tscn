@@ -1,24 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://djxcgqhxhpaas"]
+[gd_scene load_steps=3 format=3 uid="uid://djxcgqhxhpaas"]
 
 [ext_resource type="Script" uid="uid://baj5m8ktxvjmm" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://3x17o83sa0ua" path="res://BG.tscn" id="2_0xm2m"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ig7tw")
 
 [node name="play" type="Button" parent="."]
-offset_left = 338.0
-offset_top = 235.0
-offset_right = 569.0
-offset_bottom = 361.0
+offset_left = 465.0
+offset_top = 179.0
+offset_right = 592.0
+offset_bottom = 232.0
 text = "PLAY"
 
 [node name="quit" type="Button" parent="."]
-offset_left = 634.0
-offset_top = 233.0
-offset_right = 866.0
-offset_bottom = 360.0
+offset_left = 625.0
+offset_top = 181.0
+offset_right = 754.0
+offset_bottom = 233.0
 tooltip_text = "Pressing this will quit the program"
 text = "QUIT"
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_0xm2m")]
 
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
